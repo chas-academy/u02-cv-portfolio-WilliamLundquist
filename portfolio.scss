@@ -1,0 +1,345 @@
+// Globala inställningar
+
+$backgroundC: #f0e4cf
+;
+$fontFamilyText: Verdana;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    background-image: linear-gradient(to bottom right, #E3E7D3, #476C9B);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+// Header sektion
+.header {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    padding: 2%
+    
+}
+.header .text {
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+ .header .text h1 {
+            font-size: 4rem;
+        }
+
+ .header .text h2 {
+            font-size: 3.5rem;
+            text-align: left;
+        }
+
+    
+
+
+
+    
+.container .navbar {
+    grid-row: 2 / 2;
+    grid-column: 1 / 13;
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+}
+
+        .container .navbar .button {
+            border: 3px solid black;
+            border-radius: 15px;
+            font-weight: bold;
+            width: 100%;
+            height: 50%;
+            background-color: rgb(221, 203, 203); 
+            padding: 1.5rem;
+            font-size: 1.5rem;
+            text-decoration: none;
+            text-align: center;
+            margin-bottom: 5%;
+            margin-top: 2%;    
+            }
+   
+
+// Personligt brev
+.personal-letter {
+    grid-row: 3 / 5;
+    grid-column: 2 / 10;
+    border: 5px solid black;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: $backgroundC;
+    margin: 5%;
+}
+   .personal-letter h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .aboutMeText {
+        text-align: left;
+        font-size: 1.25rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 15px;
+    }
+
+// CV Profil sektion
+.cv-profile {
+    grid-row: 5 / 7;
+    grid-column: 2 / 10;
+    border: 5px solid black;
+    padding: 15px;
+    border-radius: 30px;
+    background-color:$backgroundC;
+    margin: 45px;
+}
+   .cv-profile h1 {
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .cv-profile p {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+
+.previous-work {
+    grid-row: 7 / 10;
+    grid-column: 2 / 10;
+    border: 5px solid black;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: $backgroundC;
+}
+
+.previous-work h1, h2 {
+    text-align: center;
+    font-family: $fontFamilyText;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.previous-work p {
+    text-align: left;
+    font-family: $fontFamilyText;
+    font-size: 1rem;
+}
+
+.previous-work .workingYears {
+    text-align: center;
+    font-family: $fontFamilyText;
+    font-size: 1.25rem;
+}
+
+.education {
+    grid-row: 10 / 11;
+    grid-column: 2 / 10;
+    border: 5px solid black;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: $backgroundC;
+}
+
+
+// Sidopanel sektion
+.sidebar {
+    grid-row: 7 / 11;
+    grid-column: 10 / 13;
+    max-width: 100%;
+    min-width: 200px;
+    justify-content: center;
+    border: 5px solid black;
+    border-radius: 30px;
+    background-color: $backgroundC;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 5%;
+}
+
+.profile-photo {
+    height: 100%;
+    width: 100%;
+   
+}
+
+.profile-photo img {
+width: 100%;
+height: auto;
+border-radius: 10%;
+}
+
+    .sidebar .sidebar-competence {
+
+        h2 {
+            font-size: 1.5rem;
+            padding: 5%;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            padding: 5%;
+        }
+        
+        p {
+            font-size: 25px;
+            padding: 5%;
+        }
+
+
+       
+        
+    }   
+// Footer sektion
+.container .footer {
+    grid-row: 11 / 13;
+    grid-column: 2 / -1;
+    max-width: 100%;
+    max-height: auto;
+    margin: 45px;
+}
+
+.container .footer .contact {
+    h1 {
+        font-size: 55px;
+    }
+
+    p {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 0px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .header {
+        background-color: rgb(34, 34, 31);
+        grid-column: 1 / -1;
+        gap: 15px;
+        
+        
+        h1 {
+            padding: 20px;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+            
+        }
+    
+            .navbar {
+    
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+
+            .button {
+                font-weight: bold;
+                margin: 5px;
+                width: 100%;
+                background-color: darkgrey; 
+                padding: 5px;
+                border-radius: 10px;
+                font-size: 15px;
+                text-decoration: none;
+                text-align: left;
+                gap: 5px;
+        
+                }
+
+        }
+    } 
+
+
+    .sidebar {
+        display: none;
+    }
+   
+
+    .personal-letter {
+        background-color: wheat;
+        padding: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        grid-column: 1 / -1;
+        font-size: 16px;
+        text-align: left;
+    
+        h1 {
+            text-align: center;
+            font-size: 24px;
+        }
+    }
+
+    .cv-profile {
+        background-color: wheat;
+        width: 100%;
+        grid-column: 1 / -1;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 16px;
+    
+        h1 {
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .workingYears {
+            text-align: center;
+        }
+    
+        p, .list {
+            text-align: left;
+            font-size: 1rem;
+            padding: 10px;
+            margin: 10px;
+        }
+    
+        .list {
+            padding: 15px;
+            font-size: 16px;
+        }
+    }
+
+    .footer {
+        background-color: rgb(172, 172, 112);;
+        grid-column: 1 / 13;
+        grid-row: 11 / 13;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .lofi-video {
+        width: 100%;
+        height: 500px;
+    }
+
+    .button {
+        font-weight: bold;
+        margin: 20px;
+        width: 350px;
+        background-color: darkgrey; 
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 35px;
+        text-decoration: none;
+        text-align: center;
+
+        }
+}

@@ -1,14 +1,17 @@
 // Globala inställningar
 
-$backgroundC: #f0e4cf
-;
+$backgroundC: #f0e4cf;
 $fontFamilyText: Verdana;
+$fontSizep: 1.25rem;
+$fontSize900px: 1rem;
+$fontSizeH2: 3.5rem;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .container {
     background-image: linear-gradient(to bottom right, #E3E7D3, #476C9B);
     display: grid;
@@ -21,325 +24,313 @@ $fontFamilyText: Verdana;
 .header {
     grid-row: 1 / 2;
     grid-column: 1 / -1;
-    padding: 2%
-    
+    padding: 2%;
 }
-.header .text {
-        margin-top: 2%;
-        margin-left: 2%;
-    }
- .header .text h1 {
-            font-size: 4rem;
-        }
 
- .header .text h2 {
-            font-size: 3.5rem;
-            text-align: left;
-        }
+.text {
+    margin-top: 2%;
+    margin-left: 2%;
+}
 
-    
+.text h1 {
+    font-size: 4rem;
+}
 
+.text h2 {
+    font-size: 3.5rem;
+    text-align: left;
+}
 
-
-    
-.container .navbar {
+.navbar {
     grid-row: 2 / 2;
-    grid-column: 1 / 13;
+    grid-column: 1 / -1;
     display: flex;
-    flex-direction: row;
-    margin: 2%;
-}
+    justify-content: space-around;
+    padding: 10px;
+    }
 
-        .container .navbar .button {
-            border: 3px solid black;
-            border-radius: 15px;
-            font-weight: bold;
-            width: 100%;
-            height: 50%;
-            background-color: rgb(221, 203, 203); 
-            padding: 1.5rem;
-            font-size: 1.5rem;
-            text-decoration: none;
-            text-align: center;
-            margin-bottom: 5%;
-            margin-top: 2%;    
-            }
-   
+    .button {
+        border: 3px solid black;
+        border-radius: 15px;
+        font-weight: bold;
+        background-color: rgb(221, 203, 203);
+        width: 100%;
+        margin: 45px;
+        padding: 10px;
+        font-size: 16px;
+        text-decoration: none;
+        text-align: center;
+    }
 
 // Personligt brev
 .personal-letter {
     grid-row: 3 / 5;
-    grid-column: 2 / 10;
+    grid-column: 1 / -1;
+    display: flex;
+    flex: 1;
     border: 5px solid black;
     padding: 15px;
     border-radius: 30px;
     background-color: $backgroundC;
     margin: 5%;
 }
-   .personal-letter h2 {
-        text-align: center;
-        font-size: 2rem;
-    }
 
-    .aboutMeText {
-        text-align: left;
-        font-size: 1.25rem;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        padding: 15px;
-    }
+.personal-letter h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.aboutMeText {
+    text-align: left;
+    font-size: 1.25rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 15px;
+}
 
 // CV Profil sektion
 .cv-profile {
     grid-row: 5 / 7;
-    grid-column: 2 / 10;
-    border: 5px solid black;
-    padding: 15px;
-    border-radius: 30px;
-    background-color:$backgroundC;
-    margin: 45px;
-}
-   .cv-profile h1 {
-        text-align: center;
-        font-size: 3rem;
-    }
-
-    .cv-profile p {
-        text-align: center;
-        font-size: 2rem;
-    }
-
-
-.previous-work {
-    grid-row: 7 / 10;
-    grid-column: 2 / 10;
+    grid-column: 1 / -1;
+    display: flex;
     border: 5px solid black;
     padding: 15px;
     border-radius: 30px;
     background-color: $backgroundC;
+    margin: 5%;
 }
 
-.previous-work h1, h2 {
+.cv-profile h1 {
     text-align: center;
+    font-size: 2.5rem;
+}
+
+.cv-profile p {
+    text-align: left;
+    font-size: 1.5rem;
+}
+// TIDIGARE ARBETSPLATSER
+.previous-work {
+    grid-row: 8 / 11;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    border: 5px solid black;
+    border-radius: 30px;
+    background-color: $backgroundC;
+    padding-bottom: 30px;
+    margin: 5%;
+}
+
+.previous-work h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding: 2%;
+}
+
+.previous-work table {
+    display: flex;
+    flex-wrap: wrap;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.25rem;
     font-family: $fontFamilyText;
-    font-weight: bold;
+}
+
+.previous-work th {
+    padding: 15px;
+    width: 100%;
+    text-align: left;
     font-size: 1.5rem;
 }
 
-.previous-work p {
+.previous-work td {
+    padding: 15px;
+    border-bottom: 1px solid black;
     text-align: left;
-    font-family: $fontFamilyText;
-    font-size: 1rem;
 }
-
-.previous-work .workingYears {
-    text-align: center;
-    font-family: $fontFamilyText;
-    font-size: 1.25rem;
-}
-
+//UTBILDNING
 .education {
-    grid-row: 10 / 11;
-    grid-column: 2 / 10;
+    grid-row: 11 / 12;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
     border: 5px solid black;
     padding: 15px;
     border-radius: 30px;
     background-color: $backgroundC;
+    margin: 5%;
 }
 
+.education #link-to-utbildning-internal {
+    font-size: 2.5rem;
+}
+
+.education p {
+    font-size: 1.5rem;
+}
+
+.education h2 {
+    font-size: 2rem;
+}
+
+.education li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: $fontFamilyText;
+    padding: 10px;
+}
 
 // Sidopanel sektion
 .sidebar {
-    grid-row: 7 / 11;
-    grid-column: 10 / 13;
-    max-width: 100%;
-    min-width: 200px;
+    grid-row: 7 / 8;
+    grid-column: 1 / -1;
+    margin: 5%;
     justify-content: center;
     border: 5px solid black;
     border-radius: 30px;
     background-color: $backgroundC;
     text-align: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 5%;
 }
-
 .profile-photo {
     height: 100%;
     width: 100%;
-   
 }
 
 .profile-photo img {
-width: 100%;
-height: auto;
-border-radius: 10%;
+    width: 30%;
+    height: auto;
+    border-radius: 10%;
 }
 
-    .sidebar .sidebar-competence {
+.sidebar .sidebar-competence h2 {
+    font-size: 1.5rem;
+}
 
-        h2 {
-            font-size: 1.5rem;
-            padding: 5%;
-        }
+.sidebar .sidebar-competence h3 {
+    font-size: 1.5rem;
+}
 
-        h3 {
-            font-size: 1.5rem;
-            padding: 5%;
-        }
-        
-        p {
-            font-size: 25px;
-            padding: 5%;
-        }
+.sidebar .sidebar-competence p {
+    font-size: 25px;
+}
 
-
-       
-        
-    }   
 // Footer sektion
-.container .footer {
-    grid-row: 11 / 13;
-    grid-column: 2 / -1;
+.footer {
+    grid-row: 12 / 13;
+    grid-column: 1 / -1;
     max-width: 100%;
     max-height: auto;
     margin: 45px;
 }
 
-.container .footer .contact {
-    h1 {
-        font-size: 55px;
-    }
-
-    p {
-        font-size: 35px;
-    }
+.contact h1 {
+    font-size: 55px;
 }
 
-@media only screen and (max-width: 400px) {
+.contact p {
+    font-size: 35px;
+}
 
+#scrollTopBtn {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
     .container {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 0px;
-        grid-auto-rows: minmax(100px, auto);
+        grid-template-columns: repeat(8, 1fr);
     }
 
-    .header {
-        background-color: rgb(34, 34, 31);
-        grid-column: 1 / -1;
-        gap: 15px;
-        
-        
-        h1 {
-            padding: 20px;
-            font-size: 25px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: black;
-            
-        }
+    #scrollTopBtn {
+        display: block;
+        position: fixed;  
+        bottom: 20px;     
+        right: 20px;      
+        padding: 10px 15px;
+        font-size: 16px;
+        background-color: #476C9B;  
+        color: white;
+        border: none;
+        z-index: 1000;    
+        opacity: 0.8;
+        text-decoration: none;
+    }
+
+    .previous-work table {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow: auto;
+    }
     
-            .navbar {
+    .previous-work th {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow: auto;
+    }
+
+    .previous-work tr {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow: auto;
+    }
+
+    .previous-work td {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow: auto;
+    }
     
+    .sidebar, .personal-letter, .cv-profile, .previous-work, .education {
+        grid-column: 1 / -1; 
+    }
+
+    .navbar {
             display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-
-
-            .button {
-                font-weight: bold;
-                margin: 5px;
-                width: 100%;
-                background-color: darkgrey; 
-                padding: 5px;
-                border-radius: 10px;
-                font-size: 15px;
-                text-decoration: none;
-                text-align: left;
-                gap: 5px;
-        
-                }
-
-        }
-    } 
-
-
-    .sidebar {
-        display: none;
-    }
-   
-
-    .personal-letter {
-        background-color: wheat;
-        padding: 25px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        grid-column: 1 / -1;
-        font-size: 16px;
-        text-align: left;
-    
-        h1 {
-            text-align: center;
-            font-size: 24px;
-        }
-    }
-
-    .cv-profile {
-        background-color: wheat;
-        width: 100%;
-        grid-column: 1 / -1;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 16px;
-    
-        h1 {
-            text-align: center;
-            font-size: 20px;
-        }
-        
-        h2 {
-            text-align: center;
-            font-size: 16px;
-        }
-
-        .workingYears {
-            text-align: center;
-        }
-    
-        p, .list {
-            text-align: left;
-            font-size: 1rem;
+            justify-content: space-around;
             padding: 10px;
-            margin: 10px;
         }
-    
-        .list {
-            padding: 15px;
-            font-size: 16px;
+
+        .button {
+            border: 3px solid black;
+            border-radius: 15px;
+            font-weight: bold;
+            background-color: rgb(221, 203, 203);
+            padding: 10px;
+            font-size: 12px;
+            text-decoration: none;
+            text-align: center;
         }
+}
+
+@media screen and (max-width: 390px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
     }
 
-    .footer {
-        background-color: rgb(172, 172, 112);;
-        grid-column: 1 / 13;
-        grid-row: 11 / 13;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-
-    .lofi-video {
-        width: 100%;
-        height: 500px;
-    }
-
-    .button {
-        font-weight: bold;
-        margin: 20px;
-        width: 350px;
-        background-color: darkgrey; 
+    .navbar {
+        display: flex;
+        justify-content: space-around;
         padding: 10px;
-        border-radius: 10px;
-        font-size: 35px;
+    }
+    
+    .button {
+        border: 3px solid black;
+        border-radius: 15px;
+        font-weight: bold;
+        background-color: rgb(221, 203, 203);
+        padding: 10px;
+        font-size: 12px;
         text-decoration: none;
         text-align: center;
-
-        }
+    }
+    
+    
+    #scrollTopBtn {
+        display: block;
+    }
 }

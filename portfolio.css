@@ -1,301 +1,410 @@
 * {
+  box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
 }
 
 .container {
   background-image: linear-gradient(to bottom right, #E3E7D3, #476C9B);
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 0px;
-  grid-auto-rows: minmax(100px, auto);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 45px;
 }
 
 .header {
-  grid-row: 1/2;
-  grid-column: 1/-1;
-  padding: 2%;
-}
-
-.text {
-  margin-top: 2%;
-  margin-left: 2%;
+  text-align: left;
+  margin-bottom: 30px;
 }
 
 .text h1 {
-  font-size: 4rem;
+  font-size: 65px;
+  font-family: Arial;
+  margin-bottom: 30px;
 }
 
 .text h2 {
-  font-size: 3.5rem;
+  font-size: 45px;
+  font-family: Arial;
   text-align: left;
 }
 
 .navbar {
-  grid-row: 2/2;
-  grid-column: 1/-1;
-  gap: 5px;
-  padding: 10px;
-  display: flex; 
-  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
 }
 
 .button {
-  border: 3px solid black;
-  border-radius: 15px;
-  font-weight: bold;
-  background-color: rgb(221, 203, 203);
-  width: 100%;
-  margin: 25px;
-  padding: 10px;
-  font-size: 16px;
-  text-decoration: none;
+  background-color: #9b4767;
+  border-radius: 25px;
+  color: white;
+  font-size: 24px;
+  flex: 1;
+  margin: 10px;
   text-align: center;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.buttonMail {
+  padding: 10px 15px;
+  font-size: 24px;
+  background-color: #9b4767;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 25px;
+  width: 200px;
+  margin: 10px;
 }
 
 .personal-letter {
-  grid-row: 3/5;
-  grid-column: 1/-1;
-  display: flex;
-  flex: 1;
-  border: 5px solid black;
-  padding: 15px;
-  border-radius: 30px;
-  background-color: #f0e4cf;
-  margin: 5%;
-}
-
-.lofi-video {
   width: 100%;
-  border-radius: 60px;
+  padding: 15px;
+  border: 5px solid black;
+  border-radius: 35px;
+  background-color: #E3E7D3;
+  margin-bottom: 30px;
 }
 
 .personal-letter h2 {
+  padding: 15px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 45px;
+  font-family: Arial;
 }
 
 .aboutMeText {
-  text-align: left;
-  font-size: 1.25rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 15px;
+  font-size: 24px;
+  font-family: Verdana;
+}
+
+.lofi-video {
+  border-radius: 35px;
+  width: 100%;
 }
 
 .cv-profile {
-  grid-row: 5/7;
-  grid-column: 1/-1;
-  display: flex;
-  border: 5px solid black;
+  flex-direction: column;
+  width: 100%;
   padding: 15px;
-  border-radius: 30px;
-  background-color: #f0e4cf;
-  margin: 5%;
+  border: 5px solid black;
+  border-radius: 35px;
+  background-color: #E3E7D3;
+  margin-bottom: 30px;
 }
 
-.cv-profile h1 {
+.cv-profile h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 45px;
+  font-family: Arial;
 }
 
 .cv-profile p {
-  text-align: left;
-  font-size: 1.5rem;
-}
-
-.previous-work {
-  grid-row: 8/11;
-  grid-column: 1/-1;
-  display: flex;
-  flex-wrap: wrap;
-  height: auto;
-  border: 5px solid black;
-  border-radius: 30px;
-  background-color: #f0e4cf;
-  padding-bottom: 30px;
-  margin: 5%;
-}
-
-.previous-work h2 {
   text-align: center;
-  font-size: 2rem;
-  padding: 2%;
-}
-
-.previous-work table {
-  display: flex;
-  flex-wrap: wrap;
-  border-collapse: collapse;
-  width: 100%;
-  font-size: 1.25rem;
+  font-size: 24px;
   font-family: Verdana;
-}
-
-.previous-work th {
-  padding: 15px;
-  width: 100%;
-  text-align: left;
-  font-size: 1.5rem;
-}
-
-.previous-work td {
-  padding: 15px;
-  border-bottom: 1px solid black;
-  text-align: left;
-}
-
-.education {
-  grid-row: 11/12;
-  grid-column: 1/-1;
-  display: flex;
-  flex-wrap: wrap;
-  border: 5px solid black;
-  padding: 15px;
-  border-radius: 30px;
-  background-color: #f0e4cf;
-  margin: 5%;
-}
-
-.education #link-to-utbildning-internal {
-  font-size: 2.5rem;
-}
-
-.education p {
-  font-size: 1.5rem;
-}
-
-.education h2 {
-  font-size: 2rem;
-}
-
-.education li {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-family: Verdana;
-  padding: 10px;
-}
-
-.sidebar {
-  grid-row: 7/8;
-  grid-column: 1/-1;
-  margin: 5%;
-  justify-content: center;
-  border: 5px solid black;
-  border-radius: 30px;
-  background-color: #f0e4cf;
-  text-align: center;
 }
 
 .profile-photo {
-  height: 100%;
-  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .profile-photo img {
-  width: 30%;
-  height: auto;
-  border-radius: 10%;
+  border-radius: 35px;
 }
 
-.sidebar .sidebar-competence h2 {
-  font-size: 1.5rem;
+.competence-class {
+  margin: 25px;
+  padding: 25px;
 }
 
-.sidebar .sidebar-competence h3 {
-  font-size: 1.5rem;
+.competence-class p {
+  text-align: center;
+  font-size: 24px;
+  font-family: Verdana;
+  padding: 15px;
 }
 
-.sidebar .sidebar-competence p {
-  font-size: 25px;
+.competence-class h2 {
+  text-align: center;
+  font-size: 45px;
+  font-family: Arial;
+}
+
+.competence-class h3 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.previous-work {
+  display: block;
+  width: 100%;
+  border: 5px solid black;
+  border-radius: 35px;
+  background-color: #E3E7D3;
+  margin-bottom: 30px;
+}
+
+.previous-work table {
+  display: block;
+  font-size: 24px;
+  font-family: Arial;
+  padding: 30px;
+}
+
+.previous-work h2 {
+  font-size: 45px;
+  padding: 25px;
+}
+
+.previous-work th {
+  text-align: left;
+  padding: 30px;
+  font-size: 40px;
+}
+
+.previous-work td {
+  text-align: left;
+  padding: 30px;
+}
+
+.previous-work tr {
+  padding: 15px;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 5px solid black;
+  padding: 30px;
+  border-radius: 35px;
+  background-color: #E3E7D3;
+  margin-bottom: 30px;
+}
+
+.education #link-to-utbildning-internal {
+  font-size: 45px;
+  font-family: Arial;
+}
+
+.education h2 {
+  font-size: 45px;
+  font-family: Arial;
+}
+
+.education h3 {
+  font-size: 40px;
+  font-family: Arial;
+}
+
+.education h5 {
+  font-size: 24px;
+}
+
+.education ul {
+  list-style-type: square;
+  gap: 15px;
+}
+
+.education li {
+  margin: 15px;
+  font-size: 24px;
 }
 
 .footer {
-  grid-row: 12/13;
-  grid-column: 1/-1;
-  max-width: 100%;
-  margin: 45px;
+  flex: 1;
+  flex-direction: column;
 }
 
-.contact h1 {
-  font-size: 55px;
+.contact {
+  margin-bottom: 15px;
+}
+
+.contact h2 {
+  font-size: 45px;
 }
 
 .contact p {
-  font-size: 35px;
+  font-size: 24px;
 }
 
-#scrollTopBtn {
+.external-links-email {
+  display: flex;
+  align-items: flex-start;
+}
+
+.external-links-email img {
+  width: 50px;
+  height: 50px;
+}
+
+.button-scroll-to-top {
   display: none;
 }
 
 @media screen and (max-width: 768px) {
-  .container {
-    grid-template-columns: repeat(8, 1fr);
-  }
-
-  #scrollTopBtn {
+  .button-scroll-to-top {
     display: block;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #476C9B;
-    color: white;
-    border: none;
+    bottom: 40px;
+    right: 50px;
     z-index: 1000;
-    opacity: 0.8;
+    background-color: #9b4767;
+    border-radius: 25px;
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    font-size: 24px;
+    opacity: 0.7;
     text-decoration: none;
   }
-
-  .navbar {
-    margin: 5px;
-  }
-
   .button {
-    font-size: 12px;
-
+    background-color: #9b4767;
+    border-radius: 25px;
+    color: white;
+    font-size: 24px;
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 15px;
   }
-  .previous-work table {
-    display: flex;
-    flex-direction: column;
+  .text h2 {
+    font-size: 30px;
+  }
+  .text h1 {
+    font-size: 45px;
+  }
+  .personal-letter h2 {
+    padding: 5px;
+    font-size: 30px;
+  }
+  .aboutMeText {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .lofi-video {
     width: 100%;
-    overflow: auto;
+  }
+  .previous-work h2 {
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
   }
   .previous-work th {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    overflow: auto;
+    font-size: 24px;
+    text-align: center;
   }
+  .previous-work table,
+  .previous-work thead,
+  .previous-work tbody,
+  .previous-work th,
+  .previous-work td,
   .previous-work tr {
-    display: flex;
-    flex-direction: column;
+    display: block;
     width: 100%;
-    overflow: auto;
+    padding: 15px;
   }
-  .previous-work td {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    overflow: auto;
+  .previous-work h2 {
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
   }
-  .sidebar, .personal-letter, .cv-profile, .previous-work, .education {
-    grid-column: 1/ -1;
+  .typeOfWork {
+    font-family: Arial;
   }
-  
-  
-}
-
-@media screen and (max-width: 390px) {
-  .container {
-    grid-template-columns: repeat(4, 1fr);
+  .cv-profile h2 {
+    font-size: 30px;
   }
- 
-  .button {
+  .cv-profile p {
+    font-size: 16px;
+  }
+  .cv-profile h3 {
+    font-size: 24px;
+  }
+  .education {
     padding: 10px;
+  }
+  .education #link-to-utbildning-internal {
+    font-size: 45px;
+  }
+  .education h2 {
+    font-size: 30px;
+  }
+  .education h3 {
+    font-size: 24px;
+  }
+  .education h5 {
+    font-size: 16px;
+  }
+  .contact h2 {
+    font-size: 24px;
+  }
+  .contact p {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 5px;
+  }
+  .aboutMeText {
+    padding: 15px;
     font-size: 12px;
+  }
+  .lofi-video {
+    width: 100%;
+  }
+  .previous-work table,
+  .previous-work thead,
+  .previous-work tbody,
+  .previous-work th,
+  .previous-work td,
+  .previous-work tr {
+    padding: 5px;
+  }
+  .previous-work h2 {
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+  }
+  .previous-work th {
+    font-size: 24px;
+    text-align: center;
+  }
+  .footer {
+    margin-bottom: 30px;
+  }
+  .contact h2 {
+    font-size: 30px;
+  }
+  .contact p {
+    font-size: 16px;
+  }
+  .button {
+    background-color: #9b4767;
+    border-radius: 25px;
+    color: white;
+    font-size: 12px;
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 15px;
+  }
+  .buttonMail {
+    font-size: 12px;
+  }
+  .button-scroll-to-top {
+    bottom: 20px;
+    right: 20px;
   }
 }/*# sourceMappingURL=portfolio.css.map */
